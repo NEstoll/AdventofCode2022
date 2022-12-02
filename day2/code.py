@@ -1,4 +1,6 @@
-with open("day2/input.txt", "r") as file:
+import sys
+
+with open(sys.argv[1]) as file:
     score = 0
     for line in file:
         opp = line.split()[0]
