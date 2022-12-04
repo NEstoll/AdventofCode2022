@@ -1,13 +1,29 @@
-import sys
+from typing import Any
 
-with open("day1/input.txt", "r") as file:
+
+
+def parseInput(inputFile) -> list[Any]:
+    lines = [line for line in inputFile]
+
+
+
+    return lines
+
+def part1(lines) -> Any:
+    for l in lines:
+
+
+        pass
+    return None
+
+def part2(lines) -> Any:
     each = []
     sum = 0
-    for line in file:
+    for line in lines:
         if line == "\n":
             each.append(sum)
             sum = 0
         else:
             sum += int(line)
     each.sort()
-    print(each[-3] + each[-2] + each[-1])
+    return (each[-3] + each[-2] + each[-1])

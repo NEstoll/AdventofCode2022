@@ -1,5 +1,24 @@
-import sys
+from typing import Any
 
-with open(sys.argv[1]) as file:
-    lines = [line for line in file]
 
+
+def parseInput(inputFile) -> list[Any]:
+    lines = [line.removesuffix("\n") for line in inputFile]
+
+
+
+    return lines
+
+def part1(lines) -> Any:
+    for l in lines:
+
+
+        pass
+    return None
+
+def part2(lines) -> Any:
+    for l in lines:
+
+
+        pass
+    return None

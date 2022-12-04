@@ -1,8 +1,24 @@
-import sys
+from typing import Any
 
-with open(sys.argv[1]) as file:
+
+
+def parseInput(inputFile) -> list[Any]:
+    lines = [line.removesuffix("\n") for line in inputFile]
+
+
+
+    return lines
+
+def part1(lines) -> Any:
+    for l in lines:
+
+
+        pass
+    return None
+
+def part2(lines) -> Any:
     score = 0
-    for line in file:
+    for line in lines:
         opp = line.split()[0]
         me = line.split()[1]
         score += (ord('X')-ord(me))*-3
@@ -12,4 +28,5 @@ with open(sys.argv[1]) as file:
             score += (ord(opp)-ord('A')+1)%3+1
         else:
             score += (2+ord(opp)-ord('A'))%3+1
-    print (score)
+    return score
+    
