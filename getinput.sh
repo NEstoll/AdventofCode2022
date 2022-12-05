@@ -1,4 +1,4 @@
-o=$(curl "https://adventofcode.com/2022/day/$1/input" \
+curl "https://adventofcode.com/2022/day/$1/input" \
   -H 'authority: adventofcode.com' \
   -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
   -H 'accept-language: en-US,en;q=0.9' \
@@ -16,7 +16,9 @@ o=$(curl "https://adventofcode.com/2022/day/$1/input" \
   -H 'upgrade-insecure-requests: 1' \
   -H 'user-agent: nicholas.estoll@gmail.com' \
   --compressed \
-  --insecure)
-if [ o != $(cat bad.txt)]
-then
-  echo $o >"day$1/input.txt"
+  --insecure \
+  -o "./day$1/input.txt"
+  if [[ $(cat ./day$1/input.txt) == $(cat bad.txt) ]]
+  then
+    rm "./day$1/input.txt"
+  fi

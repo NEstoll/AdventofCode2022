@@ -7,7 +7,7 @@ input = ["test.txt", "input.txt"]
 output = []
 output = []
 try:
-    expected = [l.removesuffix("\n").split(",") for l in open(day + "/expected.txt")]
+    expected = [[s.strip() for s in l.removesuffix("\n").strip().split(",")] for l in open(day + "/expected.txt")]
 except FileNotFoundError:
     print("Expected file not found")
     expected = []
@@ -20,6 +20,9 @@ for i in range(0, len(input)):
             codeOutput = []
             part1 = mycode.part1(codeInput)
             print("\tPart 1: " + str(part1))
+        with open(day + "/" + input[i], "r") as file:
+            codeInput = mycode.parseInput(file)
+            codeOutput = []
             part2 = mycode.part2(codeInput)
             print("\tPart 2: " + str(part2))
             output.append([part1, part2])
