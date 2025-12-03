@@ -44,7 +44,7 @@ for i in range(0, len(output)):
             else:
                 print("\tpart " + str(o+1) + ": " + '\033[92m' + str(output[i][o]) + " == " + expected[i][o] + '\033[0m')
         else:
-            print("\tpart " + str(o+1) + ": " + str(output[i][o]))
+            print("\tpart " + str(o+1) + ": \n" + str(output[i][o]))
 if bad == 0:
     print("\n" + '\033[92m' + "Provided outputs match the test cases" + '\033[0m')
 else:
