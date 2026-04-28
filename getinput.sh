@@ -3,7 +3,7 @@ curl "https://adventofcode.com/2022/day/$1/input" \
   -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
   -H 'accept-language: en-US,en;q=0.9' \
   -H 'cache-control: max-age=0' \
-  -H 'cookie: session=53616c7465645f5f5af87c01bcab673434d54bd7bd6b855f58afbd287a1d8de946061ba2ac15f0d00819c4ded3f9920d8ed63095f5b1c4058496e889e9a3e0eb' \
+  -H 'cookie: session=53616c7465645f5f47ef35db8f3621045a963e0064a8eda8972b87892642a68c59d5e4a6bafc920e79f6aa7cdef0af49078dc5e6dad56254a0063b018cc2edab' \
   -H 'referer: https://adventofcode.com/2022/day/1' \
   -H 'sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"' \
   -H 'sec-ch-ua-mobile: ?0' \
